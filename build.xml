@@ -50,6 +50,7 @@
 		<gitDiff/>
 		<echo>Three</echo>
 		<for list="${git.diff}" param="currentDiff" delimiter="${line.separator}">
+			<echo>Four</echo>
 			<sequential>
 				<if>
 					<and>
@@ -60,9 +61,11 @@
 						</not>
 					</and>
 					<then>
+						<echo>Five</echo>
 						<if>
 							<matches string="@{currentDiff}" pattern="src/aura/"/>
 							<then>
+								<echo>Six</echo>
 								<propertyregex
 									property="auraFolder"
 									input="@{currentDiff}"
