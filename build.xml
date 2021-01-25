@@ -50,7 +50,6 @@
 		<gitDiff/>
 		<echo>Three</echo>
 		<for list="${git.diff}" param="currentDiff" delimiter="${line.separator}">
-			<echo>Four</echo>
 			<sequential>
 				<if>
 					<and>
