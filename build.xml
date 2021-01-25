@@ -34,6 +34,7 @@
 				<arg value="${env.GIT_COMMIT}" />
 				<arg value="${env.GIT_PREVIOUS_SUCCESSFUL_COMMIT}" />
 			</exec>
+			<echo>Inside git Difference</echo>
 			<echo>${git.diff}</echo>
 		</sequential>
 	</macrodef>
@@ -42,9 +43,12 @@
 		<delete dir="${sf.deployDir}"/>
 		<mkdir dir="${sf.deployDir}"/>
 		<copy file="${sf.samplePackageXML}" tofile="${sf.deployDir}/package.xml"/>
+		<echo>One</echo>
 		<echo>Current GIT Commit : ${env.GIT_COMMIT}</echo>
 		<echo>Previous Known Successful GIT Commit : ${env.GIT_PREVIOUS_SUCCESSFUL_COMMIT}</echo>
+		<echo>Two</echo>
 		<gitDiff/>
+		<echo>Three</echo>
 		<for list="${git.diff}" param="currentDiff" delimiter="${line.separator}">
 			<sequential>
 				<if>
