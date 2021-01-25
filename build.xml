@@ -158,6 +158,9 @@
 						<var name="canDeploy" unset="true"/>
 						<property name="canDeploy" value="true"/>
 					</then>
+					<else>
+						<echo>Failing first if condition</echo>
+					</else>
 				</if>
 			</sequential>
 		</for>
