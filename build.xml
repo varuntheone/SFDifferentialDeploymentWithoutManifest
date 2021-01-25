@@ -159,6 +159,7 @@
 						<property name="canDeploy" value="true"/>
 					</then>
 					<else>
+						<echo>@{currentDiff}</echo>
 						<echo>Failing first if condition</echo>
 					</else>
 				</if>
