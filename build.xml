@@ -145,13 +145,13 @@
 								<echo>Generating Package.xml : ${component} with ${packagedName}</echo>
 								<xmltask source="${sf.deployDir}/package.xml" dest="${sf.deployDir}/package.xml">
 									<remove path="/Package/types[name/text()=${packagedName}]"/>
-									<insert path="//*[local-name()='Package']"> <![CDATA[
+									<!--<insert path="//*[local-name()='Package']"> <![CDATA[
 		<types>
 		<name>${packagedName}</name>
 		<members>*</members>
 		</types>
 									]]>
-									</insert>
+									</insert>-->
 								</xmltask> 
 							</else>
 						</if>
